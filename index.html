@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="main.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Butcherman|Miltonian" rel="stylesheet">
+	<title>SpookyCalc</title>
+</head>
+<body>
+
+	<div class="container">
+<div class="fallingLeaves">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+
+</div>
+
+</div>
+
+<h1> Spooky Calculator</h1>
+
+<div class="bones">
+	<div>
+<form name="calc" >
+	<table>
+		<tr>
+			<input type="textfield" name="ans" id="answers" value="">
+		</tr>
+		<tr>
+
+<input type="button" value="EQUALS" onclick="document.calc.ans.value=eval(document.calc.ans.value)">
+
+<input type="button" value="1" onclick="document.calc.ans.value+='1'">
+<input type="button" value="2" onclick="document.calc.ans.value+='2'">
+<input type="button" value="3" onclick="document.calc.ans.value+='3'">
+<input type="button" value="4" onclick="document.calc.ans.value+='4'">
+<input type="button" value="5" onclick="document.calc.ans.value+='5'">
+
+<input type="button" value="6" onclick="document.calc.ans.value+='6'">
+<input type="button" value="7" onclick="document.calc.ans.value+='7'">
+<input type="button" value="8" onclick="document.calc.ans.value+='8'">
+<input type="button" value="9" onclick="document.calc.ans.value+='9'">
+<input type="button" value="0" onclick="document.calc.ans.value+='0'">
+</tr>
+<tr>
+
+<input type="button" value="-" onclick="document.calc.ans.value+='-'">
+<input type="button" value="+" onclick="document.calc.ans.value+='+'">
+<input type="button" value="*" onclick="document.calc.ans.value+='*'">
+<input type="button" value="/" onclick="document.calc.ans.value+='/'">
+<input type="button" value="%" onclick="document.calc.ans.value+='%'">
+<input type="reset" value="Reset" onclick="evilLaugh();">
+
+<input type="button" value="AVG" onclick="document.calc.ans.value=getAvg();">
+<input type="button" VALUE="Game" onclick="window.location.href='http://scary-maze.com'">
+
+
+</tr>
+</table>
+</form>
+</div>
+</div>
+    <script type="text/javascript">
+	var arrayOne = new Array();
+	var sum = 0;
+function grabArray (){
+	arrayOne = document.getElementById('answers').value;
+	arrayOne = arrayOne.split('/').map(Number);
+	for ( let i = 0; i <arrayOne.length; i++){
+		sum += arrayOne[i];
+		console.log(sum);
+	}
+}
+function getAvg (){
+	grabArray();
+	var average = sum/arrayOne.length;
+	arrayOne = [];
+	sum = 0;
+	return average;
+}
+
+
+function evilLaugh(){
+        var aud = new Audio('Laugh.mp3');
+		aud.play();
+        }
+</script>
+
+</body>
+	<footer>
+
+	</footer>
+</html>

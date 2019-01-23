@@ -1,0 +1,178 @@
+body {
+	background: url('../images/scary1.jpeg');
+	background-size: cover;
+}
+
+.bones > div{
+	display: grid;
+	
+}
+
+
+form {
+	display: grid;
+	align-content: center;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 70px 70px 70px 70px;
+}
+
+input[type=button] {
+	display: grid;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    font-family: Miltonian;
+    text-shadow:0 0 1px transparent;
+    font-weight: 600;
+    font-size: 32px;
+    background-color: orange;
+    
+}
+
+input[type=reset] {
+	display: grid;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    font-family: Miltonian;
+    text-shadow:0 0 1px transparent;
+    font-weight: 600;
+    font-size: 32px;
+    background-color: #FF9100;
+     
+}
+input[type=textfield] {
+	display: grid;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    font-family: Miltonian;
+    text-shadow:0 0 1px transparent;
+    font-weight: 600;
+    font-size: 32px;
+    background-color:white;
+  
+    
+}
+input[type=button]:hover {
+	display: grid;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    font-family: Miltonian;
+    text-shadow:0 0 1px transparent;
+    font-weight: 600;
+    font-size: 32px;
+    background-color: #FF4E00;
+    -moz-transform: scale(1.1);
+  	-webkit-transform: scale(1.1);
+  	transform: scale(1.1);
+}
+    
+
+input[type=reset]:hover {
+	display: grid;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    font-family: Miltonian;
+    text-shadow:0 0 1px transparent;
+    font-weight: 600;
+    font-size: 32px;
+    background-color: #FF4E00;
+    
+}
+    
+
+input[type=textfield]:hover {
+	display: grid;
+	padding: 12px 20px;
+    margin: 8px 0;
+    color: black;
+    font-family: Miltonian;
+    text-shadow:0 0 1px transparent;
+    font-weight: 600;
+    font-size: 32px;
+    background-color: #FF4E00;
+    
+}
+/*Found this animation online. */
+/*https://premiumcoding.com/css3-tricks-falling-leaves-css/*/
+/*changed the png file to evil pumpkin men*/
+.fallingLeaves span {
+display: inline-block;
+width: 80px;
+height: 80px;
+margin: -280px 40px 54px -34px;
+background:url('../images/leaf.png');
+background-size: 40px;
+-webkit-animation: fallingLeaves 10s linear;
+-moz-animation: fallingLeaves 10s linear;
+}
+.fallingLeaves span:nth-child(5n+5) {
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+}
+.fallingLeaves span:nth-child(3n+2) {
+-webkit-animation-delay: 1.5s;
+-moz-animation-delay: 1.5s;
+}
+
+.fallingLeaves span:nth-child(2n+5) {
+-webkit-animation-delay: 1.7s;
+-moz-animation-delay: 1.7s;
+}
+h1 {
+  font-family: Butcherman;
+  position: relative;
+  font-size: 80px;
+  color: orange;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-image: linear-gradient(45deg, 
+                    #000000, 
+                    #7f5200,
+                    #ffa500,
+                    #FF4E00);
+  animation: 2s spookiness infinite alternate;
+}
+
+/*cant get hover here to work. think animation on h1 is conflicting.*/
+/*h1:hover {
+  font-family: Butcherman;
+  position: relative;
+  font-size: 80px;
+  color: #8A0707 !important;
+  text-align: center;
+  
+}*/
+
+@keyframes spookiness {
+  0% { transform: skewX(-10deg); }
+  5% { transform: skewX(10deg); }
+  10% { transform: skewX(-10deg); }
+  15% { transform: skewX(10deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+@-webkit-keyframes fallingLeaves {
+0% {
+opacity: 1;
+-webkit-transform: translate(0, 0px) rotateZ(0deg);
+}
+75% {
+opacity: 1;
+-webkit-transform: translate(100px, 600px) rotateZ(270deg);
+}
+100% {
+opacity: 0;
+-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+}
+}
